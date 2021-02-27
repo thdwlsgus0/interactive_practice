@@ -29,7 +29,7 @@
           transform:scale(1.1);
         }
       }
-      .face_eye{
+      .ani-on .face_eye{
         /* transform-origin: center center; */
         animation: eye-ani 0.5s infinite alternate;
       }
@@ -51,5 +51,11 @@
       <ellipse class="face_hair" cx="428.5" cy="198.5" rx="142.5" ry="123.5"/>
       <ellipse class="face_hair" cx="245.5" cy="103" rx="151.5" ry="103"/>
     </svg>
+    <script>
+       const faceElem = document.querySelector('.face');
+       faceElem.addEventListener('click', function(){
+         this.classList.toggle('ani-on');
+       });
+    </script>
   </body>
 </html>
